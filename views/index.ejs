@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="message-board">
+      <% messages.forEach( (message, index) => { %>
+      <article class="<%= `message m-${index}` %>">
+        <h2><%= message.text %></h2>
+        <p>From: <%= message.user %></p>
+        <p><small>Dated: <%= message.added.toDateString() %></small></p>
+      </article>
+      <% }) %>
+    </section>
+    <ul></ul>
+  </body>
+</html>
