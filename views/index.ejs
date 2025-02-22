@@ -13,6 +13,7 @@
         <h2><%= message.text %></h2>
         <p>From: <%= message.user %></p>
         <p><small>Dated: <%= message.added.toDateString() %></small></p>
+        <a href="/message/<%= index %>">Open Message</a>
       </article>
       <% }) %>
     </section>
